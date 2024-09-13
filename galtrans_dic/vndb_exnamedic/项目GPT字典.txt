@@ -1,0 +1,74 @@
+安城	安城re	安城崎人’s lastname,boy
+崎人	崎人re	安城崎人’s firstname,boy
+崎人くん	崎人re君	boy
+安城くん	安城re君	boy
+崎人ちゃん	崎人re酱	boy
+安城ちゃん	安城re酱	boy
+崎人さん	崎人re桑	boy
+安城さん	安城re桑	boy
+崎人先生	崎人re先生	boy
+安城先生	安城re先生	boy
+崎人先輩	崎人re前辈	boy
+安城先輩	安城re前辈	boy
+安城	安城re	安城万里音’s lastname,girl
+万里音	万里音re	安城万里音’s firstname,girl
+万里音くん	万里音re君	girl
+安城くん	安城re君	girl
+万里音ちゃん	万里音re酱	girl
+安城ちゃん	安城re酱	girl
+万里音さん	万里音re小姐	girl
+安城さん	安城re小姐	girl
+万里音先生	万里音re先生	girl
+安城先生	安城re先生	girl
+万里音先輩	万里音re前辈	girl
+安城先輩	安城re前辈	girl
+日下	日下re	日下千恵’s lastname,girl
+千恵	千惠re	日下千恵’s firstname,girl
+千恵くん	千惠re君	girl
+日下くん	日下re君	girl
+千恵ちゃん	千惠re酱	girl
+日下ちゃん	日下re酱	girl
+千恵さん	千惠re小姐	girl
+日下さん	日下re小姐	girl
+千恵先生	千惠re先生	girl
+日下先生	日下re先生	girl
+千恵先輩	千惠re前辈	girl
+日下先輩	日下re前辈	girl
+日下	日下re	日下勇美’s lastname,girl
+勇美	勇美re	日下勇美’s firstname,girl
+勇美くん	勇美re君	girl
+日下くん	日下re君	girl
+勇美ちゃん	勇美re酱	girl
+日下ちゃん	日下re酱	girl
+勇美さん	勇美re小姐	girl
+日下さん	日下re小姐	girl
+勇美先生	勇美re先生	girl
+日下先生	日下re先生	girl
+勇美先輩	勇美re前辈	girl
+日下先輩	日下re前辈	girl
+藤岡屋	藤冈屋re	藤岡屋龍太朗’s lastname,boy
+龍太朗	龙太朗re	藤岡屋龍太朗’s firstname,boy
+龍太朗くん	龙太朗re君	boy
+藤岡屋くん	藤冈屋re君	boy
+龍太朗ちゃん	龙太朗re酱	boy
+藤岡屋ちゃん	藤冈屋re酱	boy
+龍太朗さん	龙太朗re桑	boy
+藤岡屋さん	藤冈屋re桑	boy
+龍太朗先生	龙太朗re先生	boy
+藤岡屋先生	藤冈屋re先生	boy
+龍太朗先輩	龙太朗re前辈	boy
+藤岡屋先輩	藤冈屋re前辈	boy
+比留間	比留间re	比留間健吾’s lastname,boy
+健吾	健吾re	比留間健吾’s firstname,boy
+健吾くん	健吾re君	boy
+比留間くん	比留间re君	boy
+健吾ちゃん	健吾re酱	boy
+比留間ちゃん	比留间re酱	boy
+健吾さん	健吾re桑	boy
+比留間さん	比留间re桑	boy
+健吾先生	健吾re先生	boy
+比留間先生	比留间re先生	boy
+健吾先輩	健吾re前辈	boy
+比留間先輩	比留间re前辈	boy
+＠	＠
+＃	＃
