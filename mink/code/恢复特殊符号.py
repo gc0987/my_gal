@@ -1,4 +1,17 @@
 def aaa(Original ,trans):
+    if '@r' in Original:
+        spf = '@{'
+        spf1 = '@}'
+        if spf in Original:
+            print(Original)
+            le1 = Original.split(spf)
+            Original = ''
+            for kh in le1:
+                if spf1 in kh:
+                    Original = Original.replace('@r', '') + '' + kh.split(spf1)[1]
+                else:
+                    Original = Original + kh.replace('@r', '')
+            Original = Original
     if '\\n' in Original  or '@' in Original  or 'ω' in Original  or '･' in Original :
         Original  = Original 
         nameflag = ''
