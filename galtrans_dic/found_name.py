@@ -1,234 +1,130 @@
 import os
-def 队列(element,str_short):
-    buffer = str_short
-    for i in range(0, len(buffer) - 1):
-        buffer[i] = buffer[i + 1]
-    buffer[len(buffer) - 1] = element
-    return str_short
 
-日文json路径 = './' + 'gt_input\\'
-if not os.path.exists(日文json路径):
-    os.mkdir(日文json路径)
-所有文件 = os.listdir(日文json路径)
-后缀集合 = [''] * 100000
-后缀集合1 = [''] * 100000
+path = './' + 'gt_input\\'
+all_ = os.listdir(path)
 
 
-##搜索  くん
-hz = 0
-buf = [''] * 2
-向前显示 = 4
-向后显示 = 1 + 0    #向后必须大于等于1
-for file in 所有文件:
-    f = open(日文json路径 + file,'r',encoding='UTF8')
-    l = f.read()
-    f.close()
-    for i in range(len(l)):
-        单字 = l[i]
-        buf = 队列(单字,buf)
-        if ''.join(buf) == 'くん':
-            词= ''.join(l[i-向前显示:i+向后显示])
-            if 词 not in 后缀集合:
-                后缀集合[hz] = 词
-                后缀集合1[hz] = 词 + '\t' + 词
-                hz = hz + 1
+class Buf:
+    def __init__(self):
+        self.he = [''] * 100000
+        self.j = 0
+        self.c = [''] * 100000
 
-##搜索  ちゃん
-buf = [''] * 3
-向前显示 = 4
-向后显示 = 1 + 0    #向后必须大于等于1
-for file in 所有文件:
-    f = open(日文json路径 + file,'r',encoding='UTF8')
-    l = f.read()
-    f.close()
-    for i in range(len(l)):
-        单字 = l[i]
-        buf = 队列(单字,buf)
-        if ''.join(buf) == 'ちゃん':
-            词= ''.join(l[i-向前显示:i+向后显示])
-            if 词 not in 后缀集合:
-                后缀集合[hz] = 词
-                后缀集合1[hz] = 词 + '\t' + 词
-                hz = hz + 1
-##搜索  ちゃん
-buf = [''] * 3
-向前显示 = 4
-向后显示 = 1 + 0    #向后必须大于等于1
-for file in 所有文件:
-    f = open(日文json路径 + file,'r',encoding='UTF8')
-    l = f.read()
-    f.close()
-    for i in range(len(l)):
-        单字 = l[i]
-        buf = 队列(单字,buf)
-        if ''.join(buf) == 'ちゃん':
-            词= ''.join(l[i-向前显示:i+向后显示])
-            if 词 not in 后缀集合:
-                后缀集合[hz] = 词
-                后缀集合1[hz] = 词 + '\t' + 词
-                hz = hz + 1
 
-##搜索  さん
-buf = [''] * 2
-向前显示 = 4
-向后显示 = 1 + 0    #向后必须大于等于1
-for file in 所有文件:
-    f = open(日文json路径 + file,'r',encoding='UTF8')
-    l = f.read()
-    f.close()
-    for i in range(len(l)):
-        单字 = l[i]
-        buf = 队列(单字,buf)
-        if ''.join(buf) == 'さん':
-            词= ''.join(l[i-向前显示:i+向后显示])
-            if 词 not in 后缀集合:
-                后缀集合[hz] = 词
-                后缀集合1[hz] = 词 + '\t' + 词
-                hz = hz + 1
-##搜索  お嬢さん
-buf = [''] * 4
-向前显示 = 4
-向后显示 = 1 + 0    #向后必须大于等于1
-for file in 所有文件:
-    f = open(日文json路径 + file,'r',encoding='UTF8')
-    l = f.read()
-    f.close()
-    for i in range(len(l)):
-        单字 = l[i]
-        buf = 队列(单字,buf)
-        if ''.join(buf) == 'お嬢さん':
-            词= ''.join(l[i-向前显示:i+向后显示])
-            if 词 not in 后缀集合:
-                后缀集合[hz] = 词
-                后缀集合1[hz] = 词 + '\t' + 词
-                hz = hz + 1
+b = Buf()
 
-##搜索  先生
-buf = [''] * 2
-向前显示 = 4
-向后显示 = 1 + 0    #向后必须大于等于1
-for file in 所有文件:
-    f = open(日文json路径 + file,'r',encoding='UTF8')
-    l = f.read()
-    f.close()
-    for i in range(len(l)):
-        单字 = l[i]
-        buf = 队列(单字,buf)
-        if ''.join(buf) == '先生':
-            词= ''.join(l[i-向前显示:i+向后显示])
-            if 词 not in 后缀集合:
-                后缀集合[hz] = 词
-                后缀集合1[hz] = 词 + '\t' + 词
-                hz = hz + 1
-##搜索  先輩
-buf = [''] * 2
-向前显示 = 4
-向后显示 = 1 + 0    #向后必须大于等于1
-for file in 所有文件:
-    f = open(日文json路径 + file,'r',encoding='UTF8')
-    l = f.read()
-    f.close()
-    for i in range(len(l)):
-        单字 = l[i]
-        buf = 队列(单字,buf)
-        if ''.join(buf) == '先輩':
-            词= ''.join(l[i-向前显示:i+向后显示])
-            if 词 not in 后缀集合:
-                后缀集合[hz] = 词
-                后缀集合1[hz] = 词 + '\t' + 词
-                hz = hz + 1
-##搜索  ○
-buf = [''] * 1
-向前显示 = 2
-向后显示 = 1 + 2    #向后必须大于等于1
-for file in 所有文件:
-    f = open(日文json路径 + file,'r',encoding='UTF8')
-    l = f.read()
-    f.close()
-    for i in range(len(l)):
-        单字 = l[i]
-        buf = 队列(单字,buf)
-        if ''.join(buf) == '○':
-            词= ''.join(l[i-向前显示:i+向后显示])
-            if 词 not in 后缀集合:
-                后缀集合[hz] = 词
-                后缀集合1[hz] = 词 + '\t' + 词
-                hz = hz + 1
 
-##搜索  〇
-buf = [''] * 1
-向前显示 = 2
-向后显示 = 1 + 2    #向后必须大于等于1
-for file in 所有文件:
-    f = open(日文json路径 + file,'r',encoding='UTF8')
-    l = f.read()
-    f.close()
+def cl(hz, b):
+    j = b.j
+    he = b.he
+    c = b.c
+    l = ''
+    for file in all_:
+        f = open(path + file, 'r', encoding='UTF8')
+        t = f.read()
+        f.close()
+        l = l + t
+    al = l
+    l = l.split(hz)
     for i in range(len(l)):
-        单字 = l[i]
-        buf = 队列(单字,buf)
-        if ''.join(buf) == '〇':
-            词= ''.join(l[i-向前显示:i+向后显示])
-            if 词 not in 后缀集合:
-                后缀集合[hz] = 词
-                后缀集合1[hz] = 词 + '\t' + 词
-                hz = hz + 1
+        words = l[i][-3:] + hz
+        # if l[i][-1] == '"':
+        #     continue
+        # if l[i][-1] == ']':
+        #     continue
+        if words not in he:
+            he[j] = words
+            c[j] = len(al.split(words))
+            j = j + 1
+    b.j = j
+    b.he = he
+    b.c = c
+    return b
 
-##搜索  ×
-buf = [''] * 1
-向前显示 = 2
-向后显示 = 1 + 2    #向后必须大于等于1
-for file in 所有文件:
-    f = open(日文json路径 + file,'r',encoding='UTF8')
-    l = f.read()
-    f.close()
+
+def cl1(hz, b):
+    j = b.j
+    he = b.he
+    c = b.c
+    l = ''
+    for file in all_:
+        f = open(path + file, 'r', encoding='UTF8')
+        t = f.read()
+        f.close()
+        l = l + t
+    al = l
+    l = l.split(hz)
     for i in range(len(l)):
-        单字 = l[i]
-        buf = 队列(单字,buf)
-        if ''.join(buf) == '×':
-            词= ''.join(l[i-向前显示:i+向后显示])
-            if 词 not in 后缀集合:
-                后缀集合[hz] = 词
-                后缀集合1[hz] = 词 + '\t' + 词
-                hz = hz + 1
-##搜索  様
-buf = [''] * 1
-向前显示 = 2
-向后显示 = 1 + 2    #向后必须大于等于1
-for file in 所有文件:
-    f = open(日文json路径 + file,'r',encoding='UTF8')
-    l = f.read()
-    f.close()
-    for i in range(len(l)):
-        单字 = l[i]
-        buf = 队列(单字,buf)
-        if ''.join(buf) == '様':
-            词= ''.join(l[i-向前显示:i+向后显示])
-            if 词 not in 后缀集合:
-                后缀集合[hz] = 词
-                后缀集合1[hz] = 词 + '\t' + 词
-                hz = hz + 1
-l1 = ''
-for file in 所有文件:
-    f = open(日文json路径 + file,'r',encoding='UTF8')
-    l = f.read()
-    f.close()
-    l1 = l1 + l
-for i in range(len(后缀集合[0:hz])):
-    后缀集合[i] = 后缀集合[i] + '\t' + str(len(l1.split(后缀集合[i])))
-f = open('项目GPT字典.txt','r',encoding='UTF8')
+        if i == len(l) - 1:
+            break
+        words = l[i][-2:] + hz + l[i + 1][0:2]
+        if words not in he:
+            he[j] = words
+            c[j] = len(al.split(words))
+            j = j + 1
+    b.j = j
+    b.he = he
+    return b
+
+
+atc1 = 'くん,ちゃん,さん,お嬢さん,先生,先輩,様'.split(',')
+for a in atc1:
+    b = cl(a, b)
+atc2 = '○,〇,×'.split(',')
+for a in atc2:
+    b = cl1(a, b)
+he = b.he[0:b.j]
+b1 = Buf()
+b1.j = b.j
+max_ = 0
+for i in range(b.j):
+    js = int(b.c[i])
+    if max_ < js:
+        max_ = js
+j = 0
+while max_ != 0:
+    if max_ not in b.c:
+        max_ = max_ - 1
+        continue
+    for i in range(b.j):
+        js = int(b.c[i])
+        if js == max_:
+            b1.he[j] = b.he[i]
+            b1.c[j] = b.c[i]
+            j = j + 1
+    max_ = max_ - 1
+w = b1.he[0:b.j]
+c = b1.c[0:b.j]
+hj = len(w) * ['']
+for i in range(b.j):
+    hj[i] = w[i] + '\t' + str(c[i])
+f = open('项目GPT字典.txt', 'r', encoding='UTF8')
 l = f.read().split('\n')
 f.close()
-hj = 后缀集合[0:hz]
+
 for i in range(len(hj)):
     for j in range(len(l)):
         if l[j].split('\t')[0] in hj[i]:
-            hj[i] = ''
-    pass
-hj = '\n'.join(hj)
-后缀 = open('后缀.txt','w',encoding='UTF8')
-后缀.write(hj)
-后缀.close()
-
-后缀1 = open('后缀1.txt','w',encoding='UTF8')
-后缀1.write('\n'.join(后缀集合1))
-后缀1.close()
+            hj[i] = '[null]'
+hj1 = len(hj) * ['']
+k = 0
+for i in range(len(hj)):
+    if hj[i] == '[null]':
+        continue
+    hj1[k] = hj[i]
+    k = k + 1
+hj = hj1[0:k]
+hj = '\n'.join(hj).replace('[null]', '')
+f = open('name_plus.txt', 'w', encoding='UTF8')
+f.write(hj)
+f.close()
+# 搜索  くん
+# 搜索  ちゃん
+# 搜索  さん
+# 搜索  お嬢さん
+# 搜索  先生
+# 搜索  先輩
+# 搜索  様
+# 搜索  ○
+# 搜索  〇
+# 搜索  ×
